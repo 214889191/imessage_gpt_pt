@@ -199,9 +199,6 @@ def handle_message(message_dict):
     # print("最新5条消息：")
     for message in latest_messages:
         print(message)
-        # ['2023-11-27-18:51:10', 'chatgpt:', '我是由OpenAI开发的人工智能助手。']
-        # ['2023-11-27-18:57:46', '+8615183300602:', '好的']
-
         # 将消息添加到上下文数据中，根据回复的内容区别是用户还是助手
         if message[1] == 'chatgpt:':
             send_to_gpt_text.append({"role": "assistant", "content": message[2]})
