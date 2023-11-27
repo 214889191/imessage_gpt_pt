@@ -1,0 +1,2 @@
+# imessage_gpt_pt
+让你的mac变成gpt服务端，使用imessage随时随地使用chatgpt
