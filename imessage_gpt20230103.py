@@ -51,7 +51,7 @@ iMessage_id = "xxxxxxx@gmail.com"
 # 设置上下文的消息数量，用于生成回复(数量越多，消耗越多的token，但是回复的内容也越准确)
 context_num = -5
 # 设置gpt模型的名称（这里写死的，按需修改）
-model = "gpt-3.5-turbo",
+gpt_model = "gpt-3.5-turbo",
 
 
 # 发送消息功能 发文字、发图片都用的这个
@@ -208,7 +208,7 @@ def handle_message(message_dict):
 
     # 给ChatGPT发送请求，openai.ChatCompletion类用于对话用途
     completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model=gpt_model,
         messages=send_to_gpt_text,
         # 使用什么采样温度，介于 0 和 2 之间。较高的值（如 0.8）将使输出更加随机，而较低的值（如 0.2）将使输出更加集中和确定。
         temperature=0.2,
